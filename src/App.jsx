@@ -52,8 +52,8 @@ function App() {
             </>
         }
       </main>
-      <footer>
-        © Copyright 2024 Jhon David
+      <footer className='footer'>
+       <p className='copy-text'> © Copyright 2024 Jhon David</p>
       </footer>
     </article>
   )
