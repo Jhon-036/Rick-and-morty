@@ -52,6 +52,9 @@ function App() {
             </>
         }
       </main>
+      <footer>
+        © Copyright 2024 Jhon David
+      </footer>
     </article>
   )
 }
