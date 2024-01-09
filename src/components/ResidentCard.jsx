@@ -16,16 +16,16 @@ const ResidentCard = ({url}) => {
             <img src={resident?.image} alt="" />
             <div>
                 <div className="circle"></div>
-                <span>{resident?.status}</span>
+                <span className="span-status">{resident?.status}</span>
             </div>
         </header>
         <section>
             <h3>{resident?.name}</h3>
             <hr />
             <ul>
-                <li><span>Specie</span><span>{resident?.species}</span></li>
-                <li><span>Origin</span><span>{resident?.origin.name}</span></li>
-                <li><span>Eppisodes where appear</span><span>{resident?.episode.length}</span></li>
+                <li className="li-data"><span className="span1-data">Specie : </span><span className="span2-data">{resident?.species}</span></li>
+                <li className="li-data"><span className="span1-data">Origin : </span><span className="span2-data">{resident?.origin.name}</span></li>
+                <li className="li-data"><span className="span1-data">Eppisodes where appear : </span><span className="span2-data">{resident?.episode.length}</span></li>
             </ul>
         </section>
     </article>

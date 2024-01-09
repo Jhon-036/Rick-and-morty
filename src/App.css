@@ -1,14 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
 
+html {
+    background-color: #05292E;
+}
+
 article {
     height: 100%;
-    background-color: #05292E;
     font-family: 'Roboto', sans-serif;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header {
     width: 100%;
+}
+
+main {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
 }
 
 .bg-header {
@@ -18,7 +31,7 @@ header {
 .form {
     display: flex;
     justify-content: center;
-    margin: 5rem;
+    margin: 5rem 0 0;
 }
 
 .input-from {
@@ -44,20 +57,109 @@ header {
 /* location */
 
 .location {
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
-    margin-bottom: 5rem;
+    gap: 1.5rem;
+    background-color: #062226;
+    border-radius: 10px;
+    padding: 2rem 0;
 }
 
 .title-location {
     color: #71a821;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 500;
+}
+
+.ul-location {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.li-location {
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+    gap: .5rem;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.span-2 {
+    font-size: 16px;
+    font-weight: 300;
 }
 
 /* Cards */
 
+.card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    gap: 3rem;
+    color: #eee;
+}
+
 .article-card {
+    width: 250px;
+    background-color: #062226;
+    display: grid;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: relative;
+}
+
+.article-card img {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    
+}
+
+.span-status {
+    top: 25px;
+    left: 0px;
+    background-color: #062226;
+    padding: 5px 50px 5px 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: absolute;
+    font-size: 14px;
+    font-weight: 500;
+}
+.article-card section {
+    padding: 8px;
+}
+
+.article-card section h3 {
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.article-card section ul {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 8px 8px 0;
+}
+
+.li-data {
+    display: flex;
+    flex-direction: column;
+}
+
+.span1-data {
+    font-weight: 500;
+    font-size: 14px;
+    color: gray;
 }

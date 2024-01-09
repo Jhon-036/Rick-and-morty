@@ -30,26 +30,28 @@ function App() {
       <header>
         <img className='bg-header' src="/bg-header.svg" alt="Rick and Morty" />
       </header>
-      <form className='form' onSubmit={handleSubmit}>
-        <input className='input-from' ref={inputLocation} type="text" placeholder='ID'/>
-        <button className='btn-from'>Search</button>
-      </form>
-      {
-        hasError
-          ?
-          <h2 className='text-error'>❌ Hey! you must provide an id from 1 to 126</h2>
-          :
-          <>
-            <LocationCard location={location} />
-            <div>
-              {
-                location?.residents.map(url => (
-                  <ResidentCard key={url} url={url} />
-                ))
-              }
-            </div>
-          </>
-      }
+      <main>
+        <form className='form' onSubmit={handleSubmit}>
+          <input className='input-from' ref={inputLocation} type="text" placeholder='ID'/>
+          <button className='btn-from'>Search</button>
+        </form>
+        {
+          hasError
+            ?
+            <h2 className='text-error'>❌ Hey! you must provide an id from 1 to 126</h2>
+            :
+            <>
+              <LocationCard location={location} />
+              <div className='card'>
+                {
+                  location?.residents.map(url => (
+                    <ResidentCard key={url} url={url} />
+                  ))
+                }
+              </div>
+            </>
+        }
+      </main>
     </article>
   )
 }
